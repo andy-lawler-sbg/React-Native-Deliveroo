@@ -11,5 +11,6 @@ export default StyleSheet.create({
     width: 120,
     height: 30,
     marginRight: 20,
+    justifyContent: "flex-start",
   },
 });

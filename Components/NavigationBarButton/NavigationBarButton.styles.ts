@@ -13,9 +13,13 @@ export default StyleSheet.create({
     paddingHorizontal: 5,
   },
   icon: {
+    marginTop: 1,
     width: 15,
     height: 15,
-    marginHorizontal: 2,
     tintColor: AppColour,
+  },
+  text: {
+    fontSize: 10,
+    fontWeight: "500",
   },
 });

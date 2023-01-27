@@ -9,14 +9,22 @@ const NavigationView = () => {
         style={styles.image}
         source={require("../../assets/Deliveroo-Logo.png")}
       />
-      <NavigationBarButton
-        text="Sign up or log in"
-        logoPath={require("../../assets/Home.png")}
-      />
-      <NavigationBarButton
-        text="Menu"
-        logoPath={require("../../assets/Hamburger.png")}
-      />
+      <View
+        style={{
+          flex: 1,
+          flexDirection: "row",
+          justifyContent: "flex-end",
+        }}
+      >
+        <NavigationBarButton
+          text="Sign up or log in"
+          logoPath={require("../../assets/Home.png")}
+        />
+        <NavigationBarButton
+          text="Menu"
+          logoPath={require("../../assets/Hamburger.png")}
+        />
+      </View>
     </View>
   );
 };

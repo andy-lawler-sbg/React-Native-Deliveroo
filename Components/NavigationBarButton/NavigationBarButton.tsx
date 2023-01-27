@@ -10,7 +10,7 @@ const NavigationBarButton = ({ text, logoPath }: NavigationBarButtonProps) => {
     <TouchableOpacity style={styles.navBarButtonContainer} onPress={didPress}>
       <Image source={logoPath} style={styles.icon} />
       <Spacer marginAmount={3} />
-      <Text>{text}</Text>
+      <Text style={{ fontSize: 10, fontWeight: "500" }}>{text}</Text>
     </TouchableOpacity>
   );
 };

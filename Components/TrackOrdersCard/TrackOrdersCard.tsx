@@ -1,4 +1,4 @@
-import { View, Text, ImageBackground, Image } from "react-native";
+import { View, Text, ImageBackground, Image, Platform } from "react-native";
 import styles from "./TrackOrdersCard.styles";
 import DownloadButton from "../DownloadButton/DownloadButton";
 import Spacer from "../Spacer/Spacer";
@@ -13,18 +13,22 @@ const TrackOrdersCard = () => {
         <Text style={styles.headingText}>{headingText}</Text>
         <Text style={styles.descriptionText}>{descriptionText}</Text>
         <View style={styles.downloadButtonContainer}>
-          <DownloadButton
-            titleText="App Store"
-            subtitleText="Download on the"
-            logoPath={require("../../assets/Apple.png")}
-          />
-          <Spacer marginAmount={3} />
-          <DownloadButton
-            titleText="Google Play"
-            subtitleText="GET IT ON"
-            shouldTint={false}
-            logoPath={require("../../assets/GooglePlay.png")}
-          />
+          {Platform.OS === "web" ? (
+            <>
+              <DownloadButton
+                titleText="App Store"
+                subtitleText="Download on the"
+                logoPath={require("../../assets/Apple.png")}
+              />
+              <Spacer marginAmount={3} />
+              <DownloadButton
+                titleText="Google Play"
+                subtitleText="GET IT ON"
+                shouldTint={false}
+                logoPath={require("../../assets/GooglePlay.png")}
+              />
+            </>
+          ) : null}
         </View>
         <ImageBackground
           style={styles.mapImage}
