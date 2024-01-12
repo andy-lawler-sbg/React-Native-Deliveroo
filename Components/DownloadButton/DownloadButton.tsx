@@ -10,6 +10,7 @@ const DownloadButton = ({
   shouldTint = true,
 }: DownloadButtonProps) => {
   const didPres = useCallback(() => console.log(`did tap ${titleText}`), []);
+
   return (
     <TouchableOpacity style={styles.touchableContainer} onPress={didPres}>
       <View style={styles.container}>

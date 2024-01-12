@@ -12,24 +12,22 @@ const TrackOrdersCard = () => {
       <View style={styles.card}>
         <Text style={styles.headingText}>{headingText}</Text>
         <Text style={styles.descriptionText}>{descriptionText}</Text>
-        <View style={styles.downloadButtonContainer}>
-          {Platform.OS === "web" ? (
-            <>
-              <DownloadButton
-                titleText="App Store"
-                subtitleText="Download on the"
-                logoPath={require("../../assets/Apple.png")}
-              />
-              <Spacer marginAmount={3} />
-              <DownloadButton
-                titleText="Google Play"
-                subtitleText="GET IT ON"
-                shouldTint={false}
-                logoPath={require("../../assets/GooglePlay.png")}
-              />
-            </>
-          ) : null}
-        </View>
+        {Platform.OS === "web" ? (
+          <View style={styles.downloadButtonContainer}>
+            <DownloadButton
+              titleText="App Store"
+              subtitleText="Download on the"
+              logoPath={require("../../assets/Apple.png")}
+            />
+            <Spacer marginAmount={3} />
+            <DownloadButton
+              titleText="Google Play"
+              subtitleText="GET IT ON"
+              shouldTint={false}
+              logoPath={require("../../assets/GooglePlay.png")}
+            />
+          </View>
+        ) : null}
         <ImageBackground
           style={styles.mapImage}
           source={require("../../assets/Map.webp")}
