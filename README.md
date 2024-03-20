@@ -10,8 +10,8 @@ Simple Expo app with the UI for the Deliveroo Homepage. Built using React Native
 ## Install
 
 - Clone the repository
-- Run a `yarn`
-- Run `yarn start` to run the app on iOS/Android or Web.
+- Run a `npm install`
+- Run `npm run start` to run metro and then follow the terminal to run on iOS/Android/Web.
 
 **Noticed a weird bug with node 18, so try and use 16 if you want to deploy to web**
 
